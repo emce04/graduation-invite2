@@ -3,50 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>You've Got Mail! - Matt's Graduation</title>
+  <title>You've Got Mail - Matt's Graduation</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <div class="mail-window">
-    <div class="title-bar">
-      <span> You've Got Mail!</span>
+  <main class="mail-window">
+    <header class="title-bar">
+      <span>You've Got Mail</span>
       <span id="close-btn">X</span>
-    </div>
+    </header>
 
-    <div class="mail-header">
+    <section class="mail-header">
       <div><strong>From:</strong> matt@monash.edu</div>
       <div><strong>To:</strong> friends@world.com</div>
-      <div><strong>Subject:</strong> Matt's Graduation Invitation</div>
+      <div><strong>Subject:</strong> Matts Graduation Invitation</div>
       <div><strong>Date:</strong> Mon, Dec 15 2025, 3:00 PM (AUS/MEL)</div>
-    </div>
+    </section>
 
-    <div class="mail-body">
-      <h2> You're Invited!</h2>
+    <article class="mail-body">
+      <h2>You're Invited to Matt's Graduation</h2>
       <p>Hi everyone,</p>
       <p>
-        I'm excited to invite you to my <strong>Graduation Ceremony</strong> at
+        Im excited to invite you to my <strong>Graduation Ceremony</strong> at  
         <em>Robert Blackwood Hall, Monash University (Clayton campus)</em>.
       </p>
       <p>
-         <strong>Date:</strong> Monday, 15 December 2025<br>
-         <strong>Time:</strong> 3:00 PM - 5:30 PM<br>
-         <strong>Dress code:</strong> Smart casual
+        <strong>Date:</strong> Monday, 15 December 2025<br>
+        <strong>Time:</strong> 3:00 PM - 5:30 PM<br>
+        <strong>Dress code:</strong> Smart Casual
       </p>
       <p>
-        Let's celebrate together after the ceremony!  
-        <a href="#">View location map</a> or <a href="#">RSVP here</a>.
+        Join the celebration after the ceremony.  
+        <a href="#">View location map</a> | <a href="#">RSVP here</a>
       </p>
       <p>Best,<br>Matt</p>
-    </div>
+    </article>
 
-    <div class="button-row">
+    <section id="countdown-section">
+      <h3>// countdown</h3>
+      <div id="countdown">
+        <div><span id="days">--</span><label>days</label></div>
+        <div><span id="hours">--</span><label>hours</label></div>
+        <div><span id="minutes">--</span><label>minutes</label></div>
+        <div><span id="seconds">--</span><label>seconds</label></div>
+      </div>
+    </section>
+
+    <footer class="button-row">
       <button class="retro-btn">Reply</button>
       <button class="retro-btn">Forward</button>
       <button class="retro-btn">Add to Calendar</button>
       <button class="retro-btn">Open Stream</button>
-    </div>
-  </div>
+    </footer>
+  </main>
 
   <script src="script.js"></script>
 </body>
