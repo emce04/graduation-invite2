@@ -3,31 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Matt's Graduation Invitation ()</title>
+  <title>Matt's Graduation </title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="hero">
-    <h1>You're Invited!</h1>
-    <h2>Matt's Graduation Ceremony</h2>
-    <p class="date">()December 16, 2025 ()3 :00 PM</p>
-    <p class="venue">() Monash University, Clayton Campus</p>
-    <button onclick="scrollToDetails()">See Details</button>
-  </div>
+  <canvas id="confetti"></canvas>
 
-  <section id="details">
-    <h2>Event Details</h2>
-    <p>Join us as we celebrate this milestone together! Bring your smile and good vibes ()</p>
-    <p><strong>Dress code:</strong> Semi-formal</p>
-    <p><strong>RSVP by:</strong> December 1, 2025</p>
-    <a href="https://forms.gle/your-rsvp-link" target="_blank" class="rsvp-btn">RSVP Now</a>
-  </section>
+  <main class="terminal">
+    <div class="header">
+      <span class="dot red"></span>
+      <span class="dot yellow"></span>
+      <span class="dot green"></span>
+      <span class="path">matt@monash:~/graduation_invite.sh</span>
+    </div>
 
-  <footer>
-    <p>Made with () by Matt</p>
-  </footer>
+    <div class="content">
+      <p class="command"><span class="prompt">matt@monash:~$</span> echo "You're Invited!"</p>
+      <h1>You're Invited to Matt's Graduation </h1>
+      <p># Ceremony finishes around <span class="highlight">5:30-6:00 PM</span> on <span class="highlight">Mon, 15 Dec 2025</span> (Melbourne). Join the celebration!</p>
+
+      <div class="info">
+        <div class="card">
+          <p class="label">// DATE & TIME</p>
+          <p>Mon, Dec 15 2025, 3:00 PM</p>
+          <p class="sub">TZ=AUS/MEL | fmt=locale</p>
+        </div>
+
+        <div class="card">
+          <p class="label">// LOCATION</p>
+          <p>Robert Blackwood Hall<br>Monash University, Clayton</p>
+          <p class="sub">campus=Clayton | dress=Smart Casual</p>
+        </div>
+      </div>
+
+      <h2>// countdown</h2>
+      <div id="countdown">
+        <div><span id="days">0</span><p>days</p></div>
+        <div><span id="hours">0</span><p>hours</p></div>
+        <div><span id="minutes">0</span><p>minutes</p></div>
+        <div><span id="seconds">0</span><p>seconds</p></div>
+      </div>
+
+      <div class="buttons">
+        <a href="#" class="btn green">./add_to_calendar --google</a>
+        <a href="#" class="btn purple">./add_to_calendar --ics</a>
+        <a href="#" class="btn blue">stream --open</a>
+      </div>
+    </div>
+  </main>
 
   <script src="script.js"></script>
 </body>
-
 </html>
