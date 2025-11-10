@@ -7,20 +7,20 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="mail-window">
-    <header class="title-bar">
+  <div class="xp-window">
+    <div class="xp-titlebar">
       <span>You've Got Mail</span>
-      <span id="close-btn">X</span>
-    </header>
+      <button id="close-btn">X</button>
+    </div>
 
-    <section class="mail-header">
-      <div><strong>From:</strong> matt@monash.edu</div>
-      <div><strong>To:</strong> friends@world.com</div>
-      <div><strong>Subject:</strong> Matts Graduation Invitation</div>
-      <div><strong>Date:</strong> Mon, Dec 15 2025, 3:00 PM (AUS/MEL)</div>
-    </section>
+    <div class="xp-header">
+      <p><strong>From:</strong> matt@monash.edu</p>
+      <p><strong>To:</strong> friends@world.com</p>
+      <p><strong>Subject:</strong> Matts Graduation Invitation</p>
+      <p><strong>Date:</strong> Mon, Dec 15 2025  3:00 PM (AUS/MEL)</p>
+    </div>
 
-    <article class="mail-body">
+    <div class="xp-body">
       <h2>You're Invited to Matt's Graduation</h2>
       <p>Hi everyone,</p>
       <p>
@@ -28,7 +28,7 @@
         <em>Robert Blackwood Hall, Monash University (Clayton campus)</em>.
       </p>
       <p>
-        <strong>Date:</strong> Monday, 15 December 2025<br>
+        <strong>Date:</strong> Monday 15 December 2025<br>
         <strong>Time:</strong> 3:00 PM - 5:30 PM<br>
         <strong>Dress code:</strong> Smart Casual
       </p>
@@ -36,10 +36,10 @@
         Join the celebration after the ceremony.  
         <a href="#">View location map</a> | <a href="#">RSVP here</a>
       </p>
-      <p>Best,<br>Matt</p>
-    </article>
+      <p>Best regards,<br>Matt</p>
+    </div>
 
-    <section id="countdown-section">
+    <div id="countdown-section">
       <h3>// countdown</h3>
       <div id="countdown">
         <div><span id="days">--</span><label>days</label></div>
@@ -47,15 +47,15 @@
         <div><span id="minutes">--</span><label>minutes</label></div>
         <div><span id="seconds">--</span><label>seconds</label></div>
       </div>
-    </section>
+    </div>
 
-    <footer class="button-row">
-      <button class="retro-btn">Reply</button>
-      <button class="retro-btn">Forward</button>
-      <button class="retro-btn">Add to Calendar</button>
-      <button class="retro-btn">Open Stream</button>
-    </footer>
-  </main>
+    <div class="xp-footer">
+      <button class="xp-btn">Reply</button>
+      <button class="xp-btn">Forward</button>
+      <button class="xp-btn">Add to Calendar</button>
+      <button class="xp-btn">Open Stream</button>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
