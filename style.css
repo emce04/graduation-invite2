@@ -1,143 +1,94 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Fira Code', monospace;
-}
-
 body {
-  background-color: #0f172a;
-  color: #e2e8f0;
-  overflow-x: hidden;
-  min-height: 100vh;
+  background-color: #f3f3f3;
+  font-family: Verdana, Tahoma, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
 }
 
-canvas#confetti {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-
-.terminal {
-  max-width: 800px;
-  margin: 100px auto;
-  background-color: #1e293b;
-  border-radius: 12px;
+.mail-window {
+  width: 420px;
+  background-color: #ffffff;
+  border: 1px solid #c0c0c0;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
   overflow: hidden;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
-  z-index: 1;
-  position: relative;
 }
 
-.header {
-  background-color: #0f172a;
-  padding: 12px;
+.title-bar {
+  background-color: #0055cc;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 10px 12px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title-bar span {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-.dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  display: inline-block;
-}
-.red { background: #ef4444; }
-.yellow { background: #facc15; }
-.green { background: #22c55e; }
-.path {
-  margin-left: auto;
-  color: #94a3b8;
-  font-size: 0.9rem;
+.mail-header {
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 15px;
+  font-size: 12px;
+  line-height: 1.6;
 }
 
-.content {
-  padding: 30px;
-  text-align: left;
+.mail-body {
+  padding: 18px 15px;
+  font-size: 14px;
+  color: #222;
+  line-height: 1.6;
 }
 
-.command {
-  color: #22c55e;
+.mail-body h2 {
+  margin-top: 0;
+  color: #0055cc;
 }
 
-.prompt {
-  color: #38bdf8;
-}
-
-h1 {
-  color: #e0f2fe;
-  margin-top: 10px;
-  margin-bottom: 20px;
-}
-
-.highlight {
-  color: #f472b6;
-}
-
-.info {
+.button-row {
   display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-.card {
-  background-color: #0f172a;
-  border-radius: 8px;
-  flex: 1;
-  padding: 16px;
-  min-width: 240px;
-}
-
-.label {
-  color: #facc15;
-  margin-bottom: 8px;
-}
-
-.sub {
-  font-size: 0.8rem;
-  color: #94a3b8;
-}
-
-#countdown {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-#countdown div {
-  text-align: center;
-}
-
-#countdown span {
-  font-size: 2rem;
-  color: #22c55e;
-}
-
-.buttons {
-  display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
   gap: 10px;
+  padding: 12px;
+  background-color: #f3f3f3;
+  border-top: 1px solid #ccc;
 }
 
-.btn {
-  padding: 10px 16px;
-  border-radius: 8px;
+.retro-btn {
+  background-color: #e0e0e0;
+  border: 1px solid #999;
+  border-radius: 4px;
+  padding: 6px 14px;
+  font-size: 13px;
+  cursor: pointer;
+  box-shadow: 1px 1px 0 #fff inset, -1px -1px 0 #999 inset;
+  transition: background 0.2s;
+}
+
+.retro-btn:hover {
+  background-color: #d0d0d0;
+}
+
+a {
+  color: #0033cc;
   text-decoration: none;
-  color: white;
-  font-size: 0.9rem;
-  transition: 0.2s;
 }
-.green { background-color: #22c55e; }
-.purple { background-color: #a855f7; }
-.blue { background-color: #3b82f6; }
 
-.btn:hover {
-  transform: scale(1.05);
-  opacity: 0.9;
+a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .mail-window {
+    width: 90%;
+  }
 }
