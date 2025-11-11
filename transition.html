@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loading...</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #f8e6b3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    img {
+      width: 600px;          /* adjust as you like */
+      height: auto;
+      image-rendering: pixelated;
+    }
+  </style>
+</head>
+<body>
+  <img src="Untitled design.gif" alt="Transition Scene">
+
+  <script>
+    // Wait 4 seconds (adjust to match your GIF length)
+    setTimeout(() => {
+      window.location.href = "next.html";
+    }, 2000);
+  </script>
+</body>
+</html>

@@ -3,57 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>You've Got Mail - Matt's Graduation</title>
+  <title>Graduation Invitation</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="xp-window">
-    <div class="xp-titlebar">
-      <span>You've Got Mail</span>
-      <button id="close-btn">X</button>
-    </div>
-
-    <div class="xp-header">
-      <p><strong>From:</strong> matt@monash.edu</p>
-      <p><strong>To:</strong> friends@world.com</p>
-      <p><strong>Subject:</strong> Matts Graduation Invitation</p>
-      <p><strong>Date:</strong> Mon, Dec 15 2025  3:00 PM (AUS/MEL)</p>
-    </div>
-
-    <div class="xp-body">
-      <h2>You're Invited to Matt's Graduation</h2>
-      <p>Hi everyone,</p>
-      <p>
-        Im excited to invite you to my <strong>Graduation Ceremony</strong> at  
-        <em>Robert Blackwood Hall, Monash University (Clayton campus)</em>.
-      </p>
-      <p>
-        <strong>Date:</strong> Monday 15 December 2025<br>
-        <strong>Time:</strong> 3:00 PM - 5:30 PM<br>
-        <strong>Dress code:</strong> Smart Casual
-      </p>
-      <p>
-        Join the celebration after the ceremony.  
-        <a href="#">View location map</a> | <a href="#">RSVP here</a>
-      </p>
-      <p>Best regards,<br>Matt</p>
-    </div>
-
-    <div id="countdown-section">
-      <h3>// countdown</h3>
-      <div id="countdown">
-        <div><span id="days">--</span><label>days</label></div>
-        <div><span id="hours">--</span><label>hours</label></div>
-        <div><span id="minutes">--</span><label>minutes</label></div>
-        <div><span id="seconds">--</span><label>seconds</label></div>
+  <div class="container">
+    <img src="land.gif" alt="Game Scene" class="background">
+    
+    <!-- Dialog box -->
+    <div class="dialog-box" id="dialog">
+      <div class="portrait-area">
+        <img src="Faceset.png" alt="Speaker" class="speaker-face">
       </div>
-    </div>
-
-    <div class="xp-footer">
-      <button class="xp-btn">Reply</button>
-      <button class="xp-btn">Forward</button>
-      <button class="xp-btn">Add to Calendar</button>
-      <button class="xp-btn">Open Stream</button>
+      <div class="dialog-content">
+        <p id="dialogText"></p>
+        <div class="buttons" id="buttons" style="display:none;">
+          <button id="yesBtn">Yes!</button>
+          <button id="noBtn">No...</button>
+        </div>
+      </div>
     </div>
   </div>
 

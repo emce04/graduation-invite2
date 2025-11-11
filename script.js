@@ -1,39 +1,61 @@
-// Close button: hides window and shows goodbye screen
-document.getElementById("close-btn").addEventListener("click", () => {
-  document.body.innerHTML = `
-    <div style="font-family:Tahoma,Verdana,sans-serif;
-                text-align:center;margin-top:40vh;color:#000;">
-      <h2>Mail Closed</h2>
-      <p>Thanks for reading Matts Graduation Invitation.</p>
-      <button onclick="location.reload()" style="
-        background:linear-gradient(to bottom,#e1e9f8,#c5d5ef);
-        border:1px solid #7089b3;border-radius:3px;
-        padding:5px 12px;cursor:pointer;">Reopen</button>
-    </div>`;
-});
+const text = "Hey there!  Would you like to attend my graduation?";
+const dialogText = document.getElementById("dialogText");
+const buttons = document.getElementById("buttons");
+const yesBtn = document.getElementById("yesBtn");
+const noBtn = document.getElementById("noBtn");
 
-// Countdown
-const eventDate = new Date("Dec 15, 2025 15:00:00").getTime();
+let index = 0;
+let looping = false; // control if "Are you sure?" loop is running
 
-function updateCountdown() {
-  const now = new Date().getTime();
-  const dist = eventDate - now;
-
-  if (dist < 0) {
-    document.getElementById("countdown-section").innerHTML = "<p>Event has started!</p>";
-    return;
+// Typing effect for main question
+function typeWriter() {
+  if (index < text.length) {
+    dialogText.innerHTML += text.charAt(index);
+    index++;
+    setTimeout(typeWriter, 40);
+  } else {
+    buttons.style.display = "flex";
   }
-
-  const days = Math.floor(dist / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((dist % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((dist % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((dist % (1000 * 60)) / 1000);
-
-  document.getElementById("days").textContent = days;
-  document.getElementById("hours").textContent = hours;
-  document.getElementById("minutes").textContent = minutes;
-  document.getElementById("seconds").textContent = seconds;
 }
 
-setInterval(updateCountdown, 1000);
-updateCountdown();
+typeWriter();
+
+// YES  go to next screen
+yesBtn.addEventListener("click", () => {
+  window.location.href = "transition.html";
+});
+
+// NO trigger looping "Are you sure?" messages, keeping buttons active
+noBtn.addEventListener("click", () => {
+  looping = true;
+  showLoopMessage();
+});
+
+function showLoopMessage() {
+  const responses = [
+    "Are you sure?",
+    "Really sure?",
+    "Come on... it's my graduation!",
+    "Please? ",
+    "Think again...",
+    "Last chance? ",
+    "Just press Yes already "
+  ];
+
+  dialogText.innerHTML = "";
+  let message = responses[Math.floor(Math.random() * responses.length)];
+  let i = 0;
+
+  buttons.style.display = "none";
+
+  function typeMessage() {
+    if (i < message.length) {
+      dialogText.innerHTML += message.charAt(i);
+      i++;
+      setTimeout(typeMessage, 40);
+    } else {
+      buttons.style.display = "flex"; // buttons reappear every time
+    }
+  }
+  typeMessage();
+}
