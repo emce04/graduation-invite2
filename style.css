@@ -102,3 +102,40 @@ button:hover {
 button:active {
   transform: translateY(1px);
 }
+
+/* Fullscreen rotate warning */
+#rotate-warning {
+  position: fixed;
+  inset: 0;
+  background: #f8e6b3;
+  color: #333;
+  font-family: 'Press Start 2P', cursive;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 18px;
+  z-index: 9999;
+}
+
+/* Show warning when in portrait mode */
+@media screen and (orientation: portrait) {
+  #rotate-warning {
+    display: flex;
+  }
+
+  .container {
+    display: none !important;
+  }
+}
+
+/* Enable game only in landscape */
+@media screen and (orientation: landscape) {
+  #rotate-warning {
+    display: none;
+  }
+
+  .container {
+    display: block;
+  }
+}
